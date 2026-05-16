@@ -34,6 +34,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Left side: Mobile menu button + Logo -->
                 <!-- Left side: Mobile menu button + Logo -->
+                <!-- Left side: Mobile menu button + Logo -->
                 <div class="flex items-center gap-2">
                     <button id="mobileMenuBtn" class="mobile-menu-btn" style="display: none;">
                         <i class="fas fa-bars"></i>
@@ -41,10 +42,11 @@
 
                     <!-- Logo with click navigation -->
                     <div class="flex items-center gap-2 cursor-pointer group" onclick="window.navigateTo('home')">
-                        <!-- Logo Image -->
+                        <!-- Logo Image with fallback -->
                         <div
-                            class="w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center">
-                            <img src="/images/logo.png" alt="WiFi5 Soft Logo" class="w-full h-full object-cover">
+                            class="w-10 h-10 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="/images/logo.png" alt="WiFi5 Soft Logo" class="w-full h-full object-cover"
+                                onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-wifi text-white text-xl\'></i>'">
                         </div>
 
                         <!-- Logo Text -->
